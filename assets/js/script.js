@@ -24,6 +24,12 @@ fetch('https://movie-database-alternative.p.rapidapi.com/?s=%3CREQUIRED%3E&r=jso
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 9eeb2bcedaa3cbb53627952ff875926770594844
 var imdbCode = []
 
 const options1 = {
