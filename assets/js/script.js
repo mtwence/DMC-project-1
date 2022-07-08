@@ -1,7 +1,15 @@
-input = $("#input");
-Search = input.val();
+var input = $("#input");
+var form = $("#form");
 
-// function to add %20 inbetween spaces of searchs
+// function to add %20 inbetween spaces of searchs for input into MDA API
+form.on("submit", function (x) {
+    x.preventDefault();
+	var search = input.val();
+	;
+	var rep = / /gi;
+	var movieInput = search.replace(rep, "%20");
+	console.log(movieInput)
+});
 
 const options = {
 	method: 'GET',
