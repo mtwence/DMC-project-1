@@ -25,21 +25,32 @@ fetch('https://movie-database-alternative.p.rapidapi.com/?s='+movieInput+'&r=jso
 		return response.json();
 	}).then(function (data) {
 		console.log(data);
-		for(var i=0;i<data.Search.length-1;i++){
+		var IDstorage = []; // Array for storing IDs
+		for(var i=0;i<9;i++){
+			//Image link to the poster
 			var poster = data.Search[i].Poster;
 			console.log(poster);
 
+			//Movie title
 			var title = data.Search[i].Title;
 			console.log("Title: "+title);
 
+			//Release year
 			var year = data.Search[i].Year;
 			console.log("Year: "+year);
+
+			//Critical imdbID
+			var imdbID = data.Search[i].imdbID;
+			IDstorage.push(imdbID);
+			//console.log("ID: "+imdbID);
 		}
+		console.log(IDstorage);
 	})
 	.catch(err => console.error(err));
 
 var imdbCode = []
 
+/*
 const options1 = {
 	method: 'GET',
 	headers: {
@@ -52,3 +63,5 @@ fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlooku
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+*/
