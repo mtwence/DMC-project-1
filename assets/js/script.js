@@ -1,5 +1,7 @@
-var input = $("#input");
-var form = $("#form");
+// var input = $("#input");
+// var form = $("#form");
+// var streamName = $("#name")
+// var
 
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
