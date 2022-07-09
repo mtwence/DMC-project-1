@@ -71,3 +71,9 @@ fetch('https://movie-database-alternative.p.rapidapi.com/?s=' + movieInput + '&r
 			})
 	})
 	.catch(err => console.error(err));
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> b48c36419f8c471f92fe3a168f56ac9fc10d3285
