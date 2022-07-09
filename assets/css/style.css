@@ -1,0 +1,27 @@
+/*  {
+    border: 2px solid red; 
+}*/
+
+.navbar-item img {
+    max-height: fit-content;
+}
+
+.navbar-item select {
+    margin: 20px;
+}
+
+.navbar, nav {
+    height: fit-content;
+    background-color: #d3853c;
+    box-shadow: 5px 5px 5px black;
+}
+
+nav img {
+    height: 10vh;
+}
+
+main {
+    height: 100vh;
+    background-image: url(../images/21523.jpg);
+
+}
