@@ -43,18 +43,22 @@ fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlooku
 		return res.json();
 	}).then(function (data){
 		console.log(data);
-		showData(data);
-	})
-	// .catch(err => console.error(err));
-	
-
-function showData() {
-	for (let i = 0; i < 6; i++) {
-	var streamName = data.collection.locations[i].display_name;
-	var icon = data.collection.locations[i].icon;
-	console.log(icon);
-	var link = data.collection.locations[i].url;
-	console.log(link);
-
+		for (var i = 0; i < 6; i++) {
+			var streamName = data.collection.locations[i].display_name;
+			console.log(streamName);
+			var icon = data.collection.locations[i].icon;
+			console.log(icon);
+			var link = data.collection.locations[i].url;
+			console.log(link);
 	}
-}
+});
+	// 	for (let i = 0; i < 6; i++) {
+	// 		var streamName = data.collection.locations[i].display_name;
+	// 		console.log(streamName);
+	// 		var icon = data.collection.locations[i].icon;
+	// 		console.log(icon);
+	// 		var link = data.collection.locations[i].url;
+	// 		console.log(link);
+		
+	// })
+	// .catch(err => console.error(err));
