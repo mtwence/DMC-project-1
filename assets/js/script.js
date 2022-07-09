@@ -3,7 +3,7 @@ var form = $("#form");
 
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
-    x.preventDefault();
+	x.preventDefault();
 	var search = input.val();
 	;
 	var rep = / /gi;
@@ -11,6 +11,7 @@ form.on("submit", function (x) {
 	console.log(movieInput)
 });
 
+// Fetch request for Movie Database Alternative 
 const options = {
 	method: 'GET',
 	headers: {
@@ -19,15 +20,33 @@ const options = {
 	}
 };
 
-fetch('https://movie-database-alternative.p.rapidapi.com/?s=%3CREQUIRED%3E&r=json&page=1', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
+fetch('https://movie-database-alternative.p.rapidapi.com/?s=' + movieInput + '&r=json&page=1', options)
+	.then(function (response) {
+		return response.json();
+	}).then(function (data) {
+		console.log(data);
+		var IDstorage = []; // Array for storing IDs
+		for (var i = 0; i < 9; i++) {
+			//Image link to the poster
+			var poster = data.Search[i].Poster;
+			console.log(poster);
+
+			//Movie title
+			var title = data.Search[i].Title;
+			console.log("Title: " + title);
+			//Release year
+			var year = data.Search[i].Year;
+			console.log("Year: " + year);
+
+			//Critical imdbID
+			var imdbID = data.Search[i].imdbID;
+			IDstorage.push(imdbID);
+			//console.log("ID: "+imdbID);
+		}
+		console.log(IDstorage);
+	})
 	.catch(err => console.error(err));
 
-
-
-
-var imdbCode = []
 
 const options1 = {
 	method: 'GET',
@@ -37,7 +56,17 @@ const options1 = {
 	}
 };
 
-fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=' + imdbCode + '&source=imdb&country=us', options1)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=' + IDstorage + '&source=imdb&country=us', options1)
+	.then(function (res) {
+		return res.json();
+	}).then(function (data) {
+		console.log(data);
+		for (var i = 0; i < 6; i++) {
+			var streamName = data.collection.locations[i].display_name;
+			console.log(streamName);
+			var icon = data.collection.locations[i].icon;
+			console.log(icon);
+			var link = data.collection.locations[i].url;
+			console.log(link);
+		}
+	})
