@@ -1,6 +1,6 @@
-/*  {
+* {
     border: 2px solid red; 
-}*/
+}
 
 .navbar-item img {
     max-height: fit-content;
@@ -13,7 +13,8 @@
 .navbar, nav {
     height: fit-content;
     background-color: #d3853c;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 7px 7px 7px black;
+    font-size: 45px;
 }
 
 nav img {
@@ -24,4 +25,12 @@ main {
     height: 100vh;
     background-image: url(../images/21523.jpg);
 
+}
+
+.input form {
+    max-width: 80px;
+}
+
+.field {
+    
 }
