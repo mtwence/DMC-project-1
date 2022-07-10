@@ -6,8 +6,11 @@
     max-height: fit-content;
 }
 
-.navbar-item select {
-    margin: 20px;
+.navbar-link {
+    display: relative;
+    max-height: fit-content;
+    font-size: 24px;
+    padding-right: 100px;
 }
 
 .navbar, nav {
@@ -17,8 +20,10 @@
     font-size: 45px;
 }
 
+
 nav img {
     height: 10vh;
+    align-items: flex-start;
 }
 
 main {
@@ -27,10 +32,50 @@ main {
 
 }
 
-.input form {
-    max-width: 80px;
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+   
+
 }
 
-.field {
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
     
+}
+
+.control {
+    width: 900px;
+    height: 100px;
+    padding: 24px;
+    top: 100px;
+    align-items: center;
+}
+
+
+.container{
+    width: :100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient();
+}
+
+.main-content {
+ position: block;
+    left: 200px;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    -
 }
