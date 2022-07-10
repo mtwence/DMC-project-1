@@ -53,12 +53,14 @@ fetch('https://movie-database-alternative.p.rapidapi.com/?s=' + movieInput + '&r
 				'X-RapidAPI-Host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com'
 			}
 		};
+		// Fetch request to utelly API which gathers data on movie availability on streaming platforms| for loop to add all the imdb codes pushed to idStorage
 		for (var j = 0; j < IDstorage.length; j++) {
 			fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=' + IDstorage[j] + '&source=imdb&country=us', options1)
 				.then(function (res) {
 					return res.json();
 				}).then(function (data) {
 					console.log(data);
+					// for loop to gather streaming platform name, icon, and link to watch/buy 
 					for (var i = 0; i < data.collection.locations.length - 1; i++) {
 						var streamName = data.collection.locations[i].display_name;
 						console.log(streamName);
