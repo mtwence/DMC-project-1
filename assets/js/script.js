@@ -1,6 +1,6 @@
-var input = $("#input");
-var form = $("#form");
-var streamName = $("#name")
+// var input = $("#input");
+// var form = $("#form");
+// var streamName = $("#name")
 // var movieInput = "Ba";
 
 var movieInput;
@@ -60,9 +60,13 @@ submitButton.addEventListener("click",function(event){
 						console.log(data);
 						// for loop to gather streaming platform name, icon, and link to watch/buy 
 						for (var i = 0; i < data.collection.locations.length - 1; i++) {
+							streamStorage = [];
 							var streamName = data.collection.locations[i].display_name;
-							console.log(streamName);
-							
+							streamStorage.push(streamName)
+							for (var k = 0; k < streamStorage.length; k++) {
+							var streamDisplay = document.getElementById(i+1).children[0].children[1];
+							console.log(streamDisplay)
+							streamDisplay.textContent = "Streaming Here: "+streamName;
 							var icon = data.collection.locations[i].icon;
 							console.log(icon);
 							
