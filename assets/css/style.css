@@ -6,6 +6,14 @@
     max-height: fit-content;
 }
 
+h1 {
+    color: rgb(6, 6, 77);
+    font-size: xx-large;
+    font-weight: 1000;
+    font-variant:small-caps;
+}
+
+
 .navbar-link {
     display: relative;
     max-height: fit-content;
@@ -55,19 +63,22 @@ main {
 }
 
 .search-bar{
-    width: 70vh;
+    width: fit-content;
+    height: fit-content;
     max-width: 100%;
+    max-height: 10%;
+    padding: 10px 20px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
-    padding: 10px 20px;
     backdrop-filter: blur(3px) saturate(180%);
     margin-top: 3%;
-    margin-left: 30%;
+    margin-left: 40%;
+
 }
 
 .search-bar input {
-    background: transparent;
-    width: 600px;
+    background: transparent
+    width: 400px;
     flex: 1;
     border: 0;
     outline: none;
@@ -100,20 +111,175 @@ cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 450px;
+    max-width: 400px;
     width: 300px;
-    height: 400px;
+    height: 100%;
     background: transparent;
     color: white;
-    margin: 9%;
+    margin: 5%;
 }
 
 .media {
     display: block;
     padding: 40px; 
     width: 300px;
-
     font-size: x-large;
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.movie-title {
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    backdrop-filter: blur(3px) saturate(180%);
+    text-align: center;
+}
+
+.release-year {
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    backdrop-filter: blur(3px) saturate(180%);
+    text-align: center;
+}
+
+.streaming-services {
+    width: auto;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    backdrop-filter: blur(3px) saturate(180%);
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .search-container {
+        width: 100px;
+        min-height: fit-content;
+        max-height: fit-content;
+        max-width: fit-content;
+        align-items: center;
+        justify-content:stretch;
+    
+    }
+    .search-bar form {
+        background: transparent;
+        width: 100px;
+        height: 50px;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 14px 0px;
+        text-align: left;
+        color: #fff;
+        
+    }
+
+    ::placeholder {
+        font-size: 8px;
+    }
+
+    .search-bar{
+        width: 100px;
+        height: 50px;
+        max-width: 100px;
+        max-height: 50px;
+        padding: 5px 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 60px;
+        backdrop-filter: blur(3px) saturate(180%);
+        margin-top: 2%;
+        margin-left: 2%;
+}
+
+    .box {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-left: 5%;
+    padding: 5px;
+}
+    .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+    width: 100%;
+    height: 50%;
+    border: solid #d3853c 5px;
+    background: transparent;
+    color: white;
+    margin: 5%;
+}
+.search-bar button img {
+    width: 18px;
+}
+}
+
+@media screen and (max-width:818px) {
+    .search-container {
+        width: 700px;
+        height: fit-content;
+        max-width: 100%;
+        align-items: center;
+        justify-content:center;
+        padding: 10%;
+    }
+    .search-bar input {
+        background: transparent;
+        width: 100%;
+        height:40px;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 10px 0px;
+        text-align: left;
+        color: #fff;
+        
+    }
+
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    .search-bar{
+        width: 60%;
+        height:auto;
+        max-width: 60%;
+        max-height: 20%;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 60px;
+        backdrop-filter: blur(3px) saturate(180%);
+        margin-top: 3%;
+        margin-left: 30%;
+}
+.box {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-left: 5%;
+    padding: 5px;
+}
+.card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 400px;
+        width: 100%;
+        height: 50%;
+        border: solid #d3853c 5px;
+        background: transparent;
+        color: white;
+        margin: 5%;
+}
 }
