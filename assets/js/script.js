@@ -57,7 +57,9 @@ submitButton.addEventListener("click",function(event){
 						for (var i = 0; i < data.collection.locations.length - 1; i++) {
 							var streamName = data.collection.locations[i].display_name;
 							console.log(streamName);
-							
+							var streamDisplay = document.getElementById(i+1).children[0].children[1];
+							console.log(streamDisplay);
+
 							var icon = data.collection.locations[i].icon;
 							console.log(icon);
 							
