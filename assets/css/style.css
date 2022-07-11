@@ -6,6 +6,13 @@
     max-height: fit-content;
 }
 
+h1 {
+    color: rgb(6, 6, 77);
+    font-size: xx-large;
+    font-weight: 1000;
+    font-variant:small-caps;
+}
+
 .navbar-link {
     display: relative;
     max-height: fit-content;
