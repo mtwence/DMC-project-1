@@ -6,7 +6,7 @@
 var movieInput;
 var submitButton = document.querySelector("#submit-button");
 
-submitButton.addEventListener("click",function(event){
+submitButton.addEventListener("click", function (event) {
 	event.preventDefault();
 	movieInput = document.querySelector("#movie-input").value;
 	console.log(movieInput);
@@ -25,19 +25,19 @@ submitButton.addEventListener("click",function(event){
 		}).then(function (data) {
 			console.log(data);
 			var IDstorage = []; // Array for storing IDs
-			for (var i = 0; i < data.Search.length-1; i++) {
+			for (var i = 0; i < data.Search.length - 1; i++) {
 				//Image link to the poster
 				var poster = data.Search[i].Poster;
-				var imageDisplay = document.getElementById(i+1).children[0].children[0].children[0].children[0].children[0];
-				imageDisplay.setAttribute("src",poster);
+				var imageDisplay = document.getElementById(i + 1).children[0].children[0].children[0].children[0].children[0];
+				imageDisplay.setAttribute("src", poster);
 				//Movie title
 				var title = data.Search[i].Title;
-				var titleDisplay = document.getElementById(i+1).children[0].children[0].children[1].children[1];
+				var titleDisplay = document.getElementById(i + 1).children[0].children[0].children[1].children[1];
 				titleDisplay.textContent = title;
 				//Release year
 				var year = data.Search[i].Year;
-				var yearDisplay = document.getElementById(i+1).children[0].children[0].children[1].children[3];
-				yearDisplay.textContent = "Release year: "+year;
+				var yearDisplay = document.getElementById(i + 1).children[0].children[0].children[1].children[3];
+				yearDisplay.textContent = "Release year: " + year;
 				//Critical imdbID
 				var imdbID = data.Search[i].imdbID;
 				IDstorage.push(imdbID);
@@ -58,20 +58,28 @@ submitButton.addEventListener("click",function(event){
 						return res.json();
 					}).then(function (data) {
 						console.log(data);
+						streamStorage = [];
 						// for loop to gather streaming platform name, icon, and link to watch/buy 
-						for (var i = 0; i < data.collection.locations.length - 1; i++) {
-							streamStorage = [];
+						for (var i = 0; i < data.collection.locations.length; i++) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
+							console.log(streamStorage)
+
 							for (var k = 0; k < streamStorage.length; k++) {
-							var streamDisplay = document.getElementById(i+1).children[0].children[1];
-							console.log(streamDisplay)
-							streamDisplay.textContent = "Streaming Here: "+streamName;
-							var icon = data.collection.locations[i].icon;
-							console.log(icon);
-							
-							var link = data.collection.locations[i].url;
-							console.log(link);
+								var streamDisplay = document.getElementById(i + 1).children[0].children[1];
+								console.log(streamDisplay)
+								if (streamStorage < 1) {
+									$(".streaming-services").hide();
+								}
+								else {
+									streamDisplay.textContent = "Streaming Here: " + streamStorage;
+									var icon = data.collection.locations[i].icon;
+									console.log(icon);
+
+									var link = data.collection.locations[i].url;
+									console.log(link);
+								}
+							}
 						}
 					})
 			}
