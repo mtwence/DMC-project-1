@@ -64,12 +64,12 @@ submitButton.addEventListener("click", function (event) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
 							console.log(streamStorage)
-
+							
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[0].children[1];
 								console.log(streamDisplay)
 								if (streamStorage < 1) {
-									$(".streaming-services").hide();
+									streamDisplay.textContent = "Not Available for Streaming"
 								}
 								else {
 									streamDisplay.textContent = "Streaming Here: " + streamStorage;
