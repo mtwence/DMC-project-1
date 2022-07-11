@@ -13,6 +13,7 @@ h1 {
     font-variant:small-caps;
 }
 
+
 .navbar-link {
     display: relative;
     max-height: fit-content;
@@ -72,10 +73,11 @@ main {
     backdrop-filter: blur(3px) saturate(180%);
     margin-top: 3%;
     margin-left: 40%;
+
 }
 
 .search-bar input {
-    background: transparent;
+    background: transparent
     width: 400px;
     flex: 1;
     border: 0;
@@ -121,7 +123,6 @@ cursor: pointer;
     display: block;
     padding: 40px; 
     width: 300px;
-
     font-size: x-large;
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -282,6 +283,3 @@ cursor: pointer;
         margin: 5%;
 }
 }
-
-
-
