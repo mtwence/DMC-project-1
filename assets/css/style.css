@@ -77,7 +77,7 @@ main {
 }
 
 .search-bar input {
-    background: transparent
+    background: transparent;
     width: 400px;
     flex: 1;
     border: 0;
