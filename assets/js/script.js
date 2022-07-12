@@ -1,16 +1,15 @@
-// var input = $("#input");
-// var form = $("#form");
-// var streamName = $("#name")
-// var movieInput = "Ba";
+var input = $("#input");
+var form = $("#form");
 
 var movieInput;
-var submitButton = document.querySelector("#submit-button");
+// function to add %20 inbetween spaces of searchs for input into MDA API
+form.on("submit", function (x) {
+    x.preventDefault();
+	var search = input.val();
+	var rep = / /gi;
+	var movieInput = search.replace(rep, "%20");
+	console.log(movieInput)
 
-submitButton.addEventListener("click", function (event) {
-	event.preventDefault();
-	movieInput = document.querySelector("#movie-input").value;
-	console.log(movieInput);
-	// Fetch request for Movie Database Alternative 
 	const options = {
 		method: 'GET',
 		headers: {
@@ -64,10 +63,9 @@ submitButton.addEventListener("click", function (event) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
 							console.log(streamStorage)
-							
+								
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[0].children[1];
-								console.log(streamDisplay)
 								if (streamStorage < 1) {
 									streamDisplay.textContent = "Not Available for Streaming"
 								}
