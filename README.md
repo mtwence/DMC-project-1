@@ -113,8 +113,7 @@ const options1 = {
 					'X-RapidAPI-Host': 'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com'
 				}
 			};
-			// Fetch request to utelly API which gathers data on movie availability on streaming platforms| for loop to add all the imdb codes pushed to idStorage
-			for (var j = 0; j < IDstorage.length; j++) {
+		for (var j = 0; j < IDstorage.length; j++) {
 				fetch('https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/idlookup?source_id=' + IDstorage[j] + '&source=imdb&country=us', options1)
 					.then(function (res) {
 						return res.json();
@@ -132,9 +131,11 @@ const options1 = {
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[1].children[1];
 									streamDisplay.textContent = "Streaming Here: " + streamStorage;
+									var icon = data.collection.locations[i].icon
+									var link = data.collection.locations[i].url;
 ```
 ## Learning Objectives
-Through this process we set-out to learn about integrating APIs into in original design of our own. Through this we wanted to improve our skills in knowledge in leveraging javascript libraries, and bootstrap alternatives to build a user friendly and responsive-site that allowed for user input. Besides just the development of some web app, it was important for us to craft our team-working and communication skills. The whole project was certainly an informative experiences for all of us, in many ways. 
+Through this process we set-out to learn about integrating APIs into an original design of our own. Through this we wanted to improve our skills and knowledge in leveraging javascript libraries, and bootstrap alternatives to build a user-friendly and responsive site. Besides just the development of some web app, it was important for us to craft our team-working and communication skills. The whole project was certainly an informative experiences for all of us, in many ways. 
 
 ## User Information
 
