@@ -3,14 +3,13 @@
 var input = $("#input");
 var form = $("#form");
 
-var movieInput;
 var submitButton = document.querySelector("#submit-button");
 
 retrieveFav();
 
-$("#favorite-button").click(function (){
+$(".favorite-btn").click(function (){
 	var favTitle = $(this).siblings(".card-content").children(".media").children(".media-content").children(".movie-title").text();
-	if(favTitle != "" || favTitle != "TITLE"){
+	if(favTitle != null || favTitle != ""){
 		localStorage.setItem("call",favTitle);
 		console.log(favTitle+ " saved.");
 	}else{
@@ -19,7 +18,7 @@ $("#favorite-button").click(function (){
 });
 
 function retrieveFav(){
-	movieInput = localStorage.getItem("call");
+	var movieInput = localStorage.getItem("call");
 	if(movieInput != null){
 		console.log("Your favorite movie is: "+movieInput);
 		const options = {
