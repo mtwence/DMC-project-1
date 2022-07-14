@@ -2,6 +2,28 @@ var input = $("#input");
 var form = $("#form");
 
 var movieInput;
+var favList = [];
+var submitButton = document.querySelector("#submit-button");
+
+retrieveFav();
+
+$("#favorite-button").click(function (){
+	var favTitle = $(this).siblings(".card-content").children(".media").children(".media-content").children(".movie-title").text();
+	favList.push(favTitle);
+	localStorage.setItem("call",favList);
+	console.log(favTitle+ " saved.");
+
+});
+
+function retrieveFav(){
+	var favStore = JSON.parse(localStorage.getItem("call"));
+	if (favStore) {
+        favList = favStore;
+    }
+}
+
+
+	// Fetch request for Movie Database Alternative 
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
     x.preventDefault();
@@ -22,21 +44,20 @@ form.on("submit", function (x) {
 		.then(function (response) {
 			return response.json();
 		}).then(function (data) {
-			console.log(data);
 			var IDstorage = []; // Array for storing IDs
 			for (var i = 0; i < data.Search.length - 1; i++) {
 				//Image link to the poster
 				var poster = data.Search[i].Poster;
-				var imageDisplay = document.getElementById(i + 1).children[0].children[0].children[0].children[0].children[0];
+				var imageDisplay = document.getElementById(i+1).children[1].children[0].children[0].children[0].children[0];
 				imageDisplay.setAttribute("src", poster);
 				//Movie title
 				var title = data.Search[i].Title;
-				var titleDisplay = document.getElementById(i + 1).children[0].children[0].children[1].children[1];
+				var titleDisplay = document.getElementById(i + 1).children[1].children[0].children[1].children[1];
 				titleDisplay.textContent = title;
 				//Release year
 				var year = data.Search[i].Year;
-				var yearDisplay = document.getElementById(i + 1).children[0].children[0].children[1].children[3];
-				yearDisplay.textContent = "Release year: " + year;
+				var yearDisplay = document.getElementById(i + 1).children[1].children[0].children[1].children[3];
+				yearDisplay.textContent = "Release Year: " + year;
 				//Critical imdbID
 				var imdbID = data.Search[i].imdbID;
 				IDstorage.push(imdbID);
