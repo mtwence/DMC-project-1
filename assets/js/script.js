@@ -1,7 +1,5 @@
-// var input = $("#input");
-// var form = $("#form");
-// var streamName = $("#name")
-// var movieInput = "Ba";
+var input = $("#input");
+var form = $("#form");
 
 var movieInput;
 var favList = [];
@@ -30,7 +28,9 @@ function retrieveFav(){
 	}
 }
 
-// Fetch request for Movie Database Alternative 
+
+	// Fetch request for Movie Database Alternative 
+
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
     x.preventDefault();
