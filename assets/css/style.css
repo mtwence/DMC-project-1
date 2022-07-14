@@ -6,6 +6,21 @@
     max-height: fit-content;
 }
 
+.navbar-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+
+
+.buttons, nav {
+    float: right;
+}
+
 h1 {
     color: rgb(6, 6, 77);
     font-size: xx-large;
@@ -15,16 +30,17 @@ h1 {
 
 
 .navbar-link {
-    display: relative;
     max-height: fit-content;
     font-size: 24px;
     padding-right: 100px;
 }
 
 .navbar, nav {
+    display: flex;
+    width: 100%;
     height: fit-content;
     background-color: #d3853c;
-    box-shadow: 7px 7px 7px black;
+    box-shadow: 5px 5px 5px black;
     font-size: 45px;
 }
 
@@ -165,6 +181,12 @@ cursor: pointer;
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
     text-align: center;
+}
+
+footer {
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
 }
 
 @media screen and (max-width: 480px) {
