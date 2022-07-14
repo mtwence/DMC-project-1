@@ -85,15 +85,17 @@ form.on("submit", function (x) {
 						return res.json();
 					}).then(function (data) {
 						console.log(data);
-						streamStorage = [];
+						var streamStorage = [];
+						var streamLength = data.collection.locations.length
+						console.log(streamLength)
 						// for loop to gather streaming platform name, icon, and link to watch/buy 
-						for (var i = 0; i < data.collection.locations.length; i++) {
+						for (var i = 0; i < streamLength; i++) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
 							console.log(streamStorage)
 								
 							for (var k = 0; k < streamStorage.length; k++) {
-								var streamDisplay = document.getElementById(i + 1).children[0].children[1];
+								var streamDisplay = document.getElementById(i + 1).children[1].children[1];
 								if (streamStorage < 1) {
 									streamDisplay.textContent = "Not Available for Streaming"
 								}
