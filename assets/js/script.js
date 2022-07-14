@@ -166,20 +166,12 @@ form.on("submit", function (x) {
 								
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[1].children[1];
-								if (streamStorage < 1) {
-									streamDisplay.textContent = "Not Available for Streaming"
-								}
-								else {
 									streamDisplay.textContent = "Streaming Here: " + streamStorage;
-									var icon = data.collection.locations[i].icon;
-									console.log(icon);
-
+									var icon = data.collection.locations[i].icon
 									var link = data.collection.locations[i].url;
-									console.log(link);
 								}
 							}
 						}
-					})
-			}
-		})
+				)}
+			})
 })
