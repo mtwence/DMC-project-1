@@ -1,19 +1,17 @@
-# StreamWhere?
+# [StreamWhere?](https://mtwence.github.io/stream-where/)
+
+StreamWhere is a simple search-engine that allows users to search for their favorite movies and tvshows inorder to find out through which services they can be streamed.
 
 
 ## Table of Contents
 
-
-- [Description](#description)
 - [Technologies](#technologies)
 - [Deployed Link](#link)
 - [Usage](#usage)
 - [User Information](#userinformation)
 - [Credits](#credits)
 - [License](#license)
-
-## Description
-StreamWhere is a simple search-engine that allows users to search for their favorite movies and tvshows inorder to find out through which services they can be streamed.  
+  
 
 ## Technologies Used
 
@@ -145,11 +143,11 @@ Through this process we set-out to learn about integrating APIs into in original
 [GitHub](https://github.com/mtwence)
 
 ### **Daniel Stefani**
-[LinkdIn](https://www.linkedin.com/in/daniel-stefani-b88695238/)
+[LinkdIn](https://www.linkedin.com/in/daniel-stefani-b88695238/) |
 [GitHub](https://github.com/DStefani86)
 
 ### **Clement Koo**
-[LinkdIn](https://www.linkedin.com/in/clement-t-k-459322138/)
+[LinkdIn](https://www.linkedin.com/in/clement-t-k-459322138/) |
 [GitHub](https://github.com/C-K999)
 ## Credits
 
@@ -162,4 +160,4 @@ UCB - Coding Bootcamp
 
 ---
 
-© 2022 Michael Wence. All Rights Reserved.
+© 2022 Michael Wence, Daniel Stefani, Clement Koo. All Rights Reserved.
