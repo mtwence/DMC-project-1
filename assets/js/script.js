@@ -1,26 +1,28 @@
-
-
+// Globals 
 var input = $("#input");
 var form = $("#form");
 
 var submitButton = document.querySelector("#submit-button");
 
+// Return Locale Storage on reload
 retrieveFav();
 
-$(".favorite-btn").click(function (){
+// Add most recent movie clicked to save to page on reload 
+$(".favorite-btn").click(function () {
 	var favTitle = $(this).siblings(".card-content").children(".media").children(".media-content").children(".movie-title").text();
-	if(favTitle != null || favTitle != ""){
-		localStorage.setItem("call",favTitle);
-		console.log(favTitle+ " saved.");
-	}else{
+	if (favTitle != null || favTitle != "") {
+		localStorage.setItem("call", favTitle);
+		console.log(favTitle + " saved.");
+	} else {
 		console.log("Invalid.");
 	}
 });
 
-function retrieveFav(){
+// Function to retrieve local storage 
+function retrieveFav() {
 	var movieInput = localStorage.getItem("call");
-	if(movieInput != null){
-		console.log("Your favorite movie is: "+movieInput);
+	if (movieInput != null) {
+		console.log("Your favorite movie is: " + movieInput);
 		const options = {
 			method: 'GET',
 			headers: {
@@ -28,7 +30,7 @@ function retrieveFav(){
 				'X-RapidAPI-Host': 'movie-database-alternative.p.rapidapi.com'
 			}
 		};
-	
+
 		fetch('https://movie-database-alternative.p.rapidapi.com/?s=' + movieInput + '&r=json&page=1', options)
 			.then(function (response) {
 				return response.json();
@@ -37,7 +39,7 @@ function retrieveFav(){
 				for (var i = 0; i < data.Search.length - 1; i++) {
 					//Image link to the poster
 					var poster = data.Search[i].Poster;
-					var imageDisplay = document.getElementById(i+1).children[1].children[0].children[0].children[0].children[0];
+					var imageDisplay = document.getElementById(i + 1).children[1].children[0].children[0].children[0].children[0];
 					imageDisplay.setAttribute("src", poster);
 					//Movie title
 					var title = data.Search[i].Title;
@@ -52,7 +54,7 @@ function retrieveFav(){
 					IDstorage.push(imdbID);
 				}
 				console.log(IDstorage);
-	
+
 				const options1 = {
 					method: 'GET',
 					headers: {
@@ -75,7 +77,7 @@ function retrieveFav(){
 								var streamName = data.collection.locations[i].display_name;
 								streamStorage.push(streamName)
 								console.log(streamStorage)
-									
+
 								for (var k = 0; k < streamStorage.length; k++) {
 									var streamDisplay = document.getElementById(i + 1).children[1].children[1];
 									if (streamStorage < 1) {
@@ -85,7 +87,7 @@ function retrieveFav(){
 										streamDisplay.textContent = "Streaming Here: " + streamStorage;
 										var icon = data.collection.locations[i].icon;
 										console.log(icon);
-	
+
 										var link = data.collection.locations[i].url;
 										console.log(link);
 									}
@@ -98,15 +100,12 @@ function retrieveFav(){
 }
 
 
-// Fetch request for Movie Database Alternative 
-
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
-    x.preventDefault();
+	x.preventDefault();
 	var search = input.val();
 	var rep = / /gi;
 	var movieInput = search.replace(rep, "%20");
-	console.log(movieInput)
 
 	const options = {
 		method: 'GET',
@@ -115,7 +114,7 @@ form.on("submit", function (x) {
 			'X-RapidAPI-Host': 'movie-database-alternative.p.rapidapi.com'
 		}
 	};
-
+	// Fetch request to MDA APi
 	fetch('https://movie-database-alternative.p.rapidapi.com/?s=' + movieInput + '&r=json&page=1', options)
 		.then(function (response) {
 			return response.json();
@@ -124,7 +123,7 @@ form.on("submit", function (x) {
 			for (var i = 0; i < data.Search.length - 1; i++) {
 				//Image link to the poster
 				var poster = data.Search[i].Poster;
-				var imageDisplay = document.getElementById(i+1).children[1].children[0].children[0].children[0].children[0];
+				var imageDisplay = document.getElementById(i + 1).children[1].children[0].children[0].children[0].children[0];
 				imageDisplay.setAttribute("src", poster);
 				//Movie title
 				var title = data.Search[i].Title;
@@ -137,8 +136,7 @@ form.on("submit", function (x) {
 				//Critical imdbID
 				var imdbID = data.Search[i].imdbID;
 				IDstorage.push(imdbID);
-			}
-			console.log(IDstorage);
+			};
 
 			const options1 = {
 				method: 'GET',
@@ -156,21 +154,19 @@ form.on("submit", function (x) {
 						console.log(data);
 						var streamStorage = [];
 						var streamLength = data.collection.locations.length
-						console.log(streamLength)
 						// for loop to gather streaming platform name, icon, and link to watch/buy 
 						for (var i = 0; i < streamLength; i++) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
-							console.log(streamStorage)
-								
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[1].children[1];
-									streamDisplay.textContent = "Streaming Here: " + streamStorage;
-									var icon = data.collection.locations[i].icon
-									var link = data.collection.locations[i].url;
-								}
+								streamDisplay.textContent = "Streaming Here: " + streamStorage;
+								var icon = data.collection.locations[i].icon
+								var link = data.collection.locations[i].url;
 							}
 						}
-				)}
-			})
+					}
+					)
+			}
+		})
 })
