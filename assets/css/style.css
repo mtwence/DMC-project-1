@@ -2,16 +2,15 @@
     border: 2px solid red; 
 } */
 
-.navbar{
-    height: 50%;
+nav {
+    width: 100%;
 }
 .navbar-item img {
     max-height: fit-content;
 }
 
-.navbar-brand{
-display: flex;
-justify-content: space-between;
+.navbar-brand {
+    width: 100%;
 }
 
 h1 {
@@ -22,13 +21,7 @@ h1 {
 }
 
 
-.navbar-link {
-    max-height: fit-content;
-    font-size: 24px;
-    padding-right: 100px;
-}
-
-.navbar, nav {
+.navbar {
     display: flex;
     width: 100%;
     height: fit-content;
@@ -68,6 +61,10 @@ main {
     backdrop-filter: blur(3px) saturate(180%);
     margin-top: 100px;
     margin-left: 600px; 
+}
+
+.contact{
+    float: right;
 }
 
 .search-bar input {
@@ -142,11 +139,16 @@ main {
     
 }
 
+.card-content {
+    justify-content: center;
+}
+
 
 .media {
     display: block;
-    padding: 40px; 
+    padding: 50px; 
     width: 300px;
+    justify-content: center;
     font-size: x-large;
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
