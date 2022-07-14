@@ -1,10 +1,7 @@
-/* * {
-    border: 2px solid red; 
-} */
-
 nav {
     width: 100%;
 }
+
 .navbar-item img {
     max-height: fit-content;
 }
@@ -17,7 +14,7 @@ h1 {
     color: rgb(6, 6, 77);
     font-size: xx-large;
     font-weight: 1000;
-    font-variant:small-caps;
+    font-variant: small-caps;
 }
 
 
@@ -29,6 +26,7 @@ h1 {
     box-shadow: 5px 5px 5px black;
     font-size: 45px;
 }
+
 nav img {
     height: 16vh;
 }
@@ -45,14 +43,14 @@ nav img {
 main {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,8,51,0.3),rgba(0,8,51,0.3)), url(../images/21523.jpg);
+    background-image: linear-gradient(rgba(0, 8, 51, 0.3), rgba(0, 8, 51, 0.3)), url(../images/galaxy.jpg);
     display: block;
     align-items: center;
     justify-content: space-around;
 }
 
 
-.search-bar{
+.search-bar {
     max-width: 100vh;
     min-width: 100vh;
     padding: 9px 5px 7px 8px;
@@ -60,10 +58,10 @@ main {
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
     margin-top: 100px;
-    margin-left: 600px; 
+    margin-left: 600px;
 }
 
-.contact{
+.contact {
     float: right;
 }
 
@@ -75,7 +73,7 @@ main {
     padding: 16px;
     font-size: 24px;
     color: #fff;
-      
+
 }
 
 ::placeholder {
@@ -90,11 +88,11 @@ main {
 }
 
 .search-bar button {
-   width: 70px;
-   float: center;
-   border: transparent;
-   background: transparent;
-   cursor: pointer;
+    width: 70px;
+    float: center;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
 }
 
 .box {
@@ -106,7 +104,7 @@ main {
     height: 100%;
     margin-left: 10%;
     padding: 10px;
-    
+
 }
 
 .favorite-btn {
@@ -131,12 +129,12 @@ main {
     max-width: 400px;
     max-height: 600px;
     width: 300px;
-    
+
     background: transparent;
     color: white;
     margin: 5%;
     border: none;
-    
+
 }
 
 .card-content {
@@ -146,7 +144,7 @@ main {
 
 .media {
     display: block;
-    padding: 50px; 
+    padding: 50px;
     width: 300px;
     justify-content: center;
     font-size: x-large;
@@ -174,13 +172,13 @@ main {
 }
 
 .streaming-services {
-        min-width: fit-content;
-        max-width: 100%;
-        height: fit-content;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 60px;
-        backdrop-filter: blur(3px) saturate(180%);
-        text-align: center;
+    min-width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    backdrop-filter: blur(3px) saturate(180%);
+    text-align: center;
 }
 
 footer {
@@ -191,12 +189,12 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  
+
     .search-container {
         max-width: 50;
     }
 
-    .search-bar{
+    .search-bar {
         width: fit-content;
         height: fit-content;
         align-items: center;
@@ -209,9 +207,9 @@ footer {
         backdrop-filter: blur(3px) saturate(180%);
         margin-top: 5%;
         margin-left: 300px;
-    
+
     }
-    
+
     .search-bar input {
         background: transparent;
         min-width: 85%;
@@ -221,48 +219,51 @@ footer {
         padding: 24px 20px;
         font-size: 24px;
         text-align: left;
-        color: #fff;   
+        color: #fff;
     }
-    
+
     .box {
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    margin-left: 5%;
-    padding: 5px;
-}
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin-left: 5%;
+        padding: 5px;
+    }
+
     .card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 400px;
-    width: 100%;
-    height: 50%;
-    border: solid #d3853c 5px;
-    background: transparent;
-    box-shadow: black 5px;
-    color: white;
-    margin: 5%;
-}
-.search-bar button img {
-    width: 18px;
-}
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 400px;
+        width: 100%;
+        height: 50%;
+        border: solid #d3853c 5px;
+        background: transparent;
+        box-shadow: black 5px;
+        color: white;
+        margin: 5%;
+    }
+
+    .search-bar button img {
+        width: 18px;
+    }
 }
 
 @media screen and (max-width:768px) {
 
     .search-container {
         width: 100%;
-        height:max-content;
+        height: max-content;
         max-width: 10vh;
         max-height: 100px;
         align-items: center;
-        justify-content:center;
+        justify-content: center;
         padding: 20%;
     }
+
     .search-bar input {
         background: transparent;
         border: 0;
@@ -270,16 +271,16 @@ footer {
         padding: 10px 0px;
         text-align: left;
         color: #fff;
-        
+
     }
 
     ::placeholder {
         font-size: 16px;
     }
 
-    .search-bar{
+    .search-bar {
         width: 60%;
-      
+
         max-width: 100%;
         max-height: 20%;
         padding: 10px 20px;
@@ -288,18 +289,20 @@ footer {
         backdrop-filter: blur(3px) saturate(180%);
         margin-top: 3%;
         margin-left: 30%;
-}
-.box {
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    margin-left: 5%;
-    padding: 5px;
-}
-.card {
+    }
+
+    .box {
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin-left: 5%;
+        padding: 5px;
+    }
+
+    .card {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -310,5 +313,5 @@ footer {
         background: transparent;
         color: white;
         margin: 5%;
-}
+    }
 }
