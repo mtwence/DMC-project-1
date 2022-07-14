@@ -2,23 +2,15 @@
     border: 2px solid red; 
 } */
 
+nav {
+    width: 100%;
+}
 .navbar-item img {
     max-height: fit-content;
 }
 
-.navbar-item {
-    display: flex;
-    justify-content: space-between;
-}
-
 .navbar-brand {
-    display: flex;
-}
-
-
-
-.buttons, nav {
-    float: right;
+    width: 100%;
 }
 
 h1 {
@@ -29,19 +21,16 @@ h1 {
 }
 
 
-.navbar-link {
-    max-height: fit-content;
-    font-size: 24px;
-    padding-right: 100px;
-}
-
-.navbar, nav {
+.navbar {
     display: flex;
     width: 100%;
     height: fit-content;
     background-color: #d3853c;
     box-shadow: 5px 5px 5px black;
     font-size: 45px;
+}
+nav img {
+    height: 16vh;
 }
 
 #input {
@@ -53,41 +42,35 @@ h1 {
     margin-left: 2%;
 }
 
-nav img {
-    height: 16vh;
-}
-
 main {
-    height: fit-content;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(rgba(0,8,51,0.3),rgba(0,8,51,0.3)), url(../images/21523.jpg);
     display: block;
     align-items: center;
     justify-content: space-around;
 }
-.search-container {
-    padding-top: 8%;
-    height: 50vh;
-    align-items: center;
-    display: flex;
-}
+
 
 .search-bar{
     max-width: 100vh;
     min-width: 100vh;
-    padding: 7px;
+    padding: 9px 5px 7px 8px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
-    margin-top: 3%;
-    align-items: center;
-    justify-items: center;
+    margin-top: 100px;
     margin-left: 600px; 
+}
+
+.contact{
+    float: right;
 }
 
 .search-bar input {
     background: transparent;
     justify-items: center;
+    min-height: fit-content;
     min-width: 85%;
     padding: 16px;
     font-size: 24px;
@@ -107,12 +90,11 @@ main {
 }
 
 .search-bar button {
-    width: 70px;
-float: center;
-border: transparent;
-background: transparent;
-cursor: pointer;
-
+   width: 70px;
+   float: center;
+   border: transparent;
+   background: transparent;
+   cursor: pointer;
 }
 
 .box {
@@ -147,8 +129,9 @@ cursor: pointer;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 400px;
+    max-height: 600px;
     width: 300px;
-    height: 100%;
+    
     background: transparent;
     color: white;
     margin: 5%;
@@ -156,11 +139,16 @@ cursor: pointer;
     
 }
 
+.card-content {
+    justify-content: center;
+}
+
 
 .media {
     display: block;
-    padding: 40px; 
+    padding: 50px; 
     width: 300px;
+    justify-content: center;
     font-size: x-large;
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -196,7 +184,8 @@ cursor: pointer;
 }
 
 footer {
-    height: 50px;
+    padding-top: 15px;
+    height: 10vh;
     font-size: 24px;
     color: #fff;
 }
@@ -219,7 +208,7 @@ footer {
         border-radius: 60px;
         backdrop-filter: blur(3px) saturate(180%);
         margin-top: 5%;
-        margin-left: 40%;
+        margin-left: 300px;
     
     }
     
