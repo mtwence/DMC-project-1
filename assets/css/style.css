@@ -44,20 +44,17 @@ h1 {
     font-size: 45px;
 }
 
-input {
-    width: 100px;
-    height: 50px;
-    max-width: 100px;
-    max-height: 50px;
-    padding: 5px 10px;
+#input {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
+    max-height: 20vh;
     margin-top: 2%;
     margin-left: 2%;
 }
+
 nav img {
-    height: 12vh;
+    height: 16vh;
 }
 
 main {
@@ -68,63 +65,39 @@ main {
     align-items: center;
     justify-content: space-around;
 }
-
-.box {
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    margin-left: 10%;
-    padding: 10px;
-    
-}
 .search-container {
-    max-width: 85%;
-    min-height: 20vh;
-    max-height: 100vh;
-    justify-content: center;
+    padding-top: 8%;
+    height: 50vh;
     align-items: center;
-    padding: 5%;
+    display: flex;
 }
 
 .search-bar{
-    width: fit-content;
-    height: fit-content;
-    align-items: center;
-    max-width: 100%;
-    min-width: 600px;
-    max-height: 10%;
-    padding: 10px 10px;
+    max-width: 100vh;
+    min-width: 100vh;
+    padding: 7px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
-    margin-top: 5%;
-    margin-left: 40%;
-
+    margin-top: 3%;
+    align-items: center;
+    justify-items: center;
+    margin-left: 600px; 
 }
 
 .search-bar input {
     background: transparent;
+    justify-items: center;
     min-width: 85%;
-    min-height: 10vh;
-    flex: 1;
-    outline: none;
-    padding: 24px 20px;
+    padding: 16px;
     font-size: 24px;
-    text-align: left;
-    color: #fff;   
-}
-
-input {
-    background: transparent;
-    height: 200px;
+    color: #fff;
+      
 }
 
 ::placeholder {
     color: rgb(189, 198, 201);
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .search-bar button img {
@@ -142,11 +115,21 @@ cursor: pointer;
 
 }
 
+.box {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+    padding: 10px;
+    
+}
+
 .favorite-btn {
     float: right;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: 40px;
-    backdrop-filter: blur(3px) saturate(180%);
     margin-top: 5%;
     margin-left: 40%;
     width: 70px;
@@ -154,9 +137,9 @@ cursor: pointer;
     background: transparent;
     cursor: pointer;
     color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 60px;
-    backdrop-filter: blur(3px) saturate(180%);
+    background: transparent;
+    border: solid rgb(189, 198, 201);
+
 }
 
 
@@ -212,7 +195,6 @@ cursor: pointer;
         text-align: center;
 }
 
-
 footer {
     height: 50px;
     font-size: 24px;
@@ -220,45 +202,39 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  
     .search-container {
-        width: 100px;
-        min-height: fit-content;
-        max-height: fit-content;
-        max-width: fit-content;
-        align-items: center;
-        justify-content:stretch;
-    
-    }
-    .search-bar form {
-        background: transparent;
-        width: 100px;
-        height: 50px;
-        flex: 1;
-        border: 0;
-        outline: none;
-        padding: 14px 0px;
-        text-align: left;
-        color: #fff;
-        
-    }
-
-    ::placeholder {
-        font-size: 8px;
+        max-width: 50;
     }
 
     .search-bar{
-        width: 100px;
-        height: 50px;
-        max-width: 100px;
-        max-height: 50px;
-        padding: 5px 10px;
+        width: fit-content;
+        height: fit-content;
+        align-items: center;
+        max-width: 40%;
+        min-width: 600px;
+        max-height: 10%;
+        padding: 10px 10px;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 60px;
         backdrop-filter: blur(3px) saturate(180%);
-        margin-top: 2%;
-        margin-left: 2%;
-}
-
+        margin-top: 5%;
+        margin-left: 40%;
+    
+    }
+    
+    .search-bar input {
+        background: transparent;
+        min-width: 85%;
+        min-height: 13vh;
+        flex: 1;
+        outline: none;
+        padding: 24px 20px;
+        font-size: 24px;
+        text-align: left;
+        color: #fff;   
+    }
+    
     .box {
     background: transparent;
     display: flex;
@@ -278,6 +254,7 @@ footer {
     height: 50%;
     border: solid #d3853c 5px;
     background: transparent;
+    box-shadow: black 5px;
     color: white;
     margin: 5%;
 }
@@ -287,19 +264,18 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+
     .search-container {
-        width: 700px;
-        height: fit-content;
-        max-width: 100%;
+        width: 100%;
+        height:max-content;
+        max-width: 10vh;
+        max-height: 100px;
         align-items: center;
         justify-content:center;
-        padding: 10%;
+        padding: 20%;
     }
     .search-bar input {
         background: transparent;
-        width: 100%;
-        height:40px;
-        flex: 1;
         border: 0;
         outline: none;
         padding: 10px 0px;
@@ -314,8 +290,8 @@ footer {
 
     .search-bar{
         width: 60%;
-        height:auto;
-        max-width: 60%;
+      
+        max-width: 100%;
         max-height: 20%;
         padding: 10px 20px;
         background: rgba(255, 255, 255, 0.2);
