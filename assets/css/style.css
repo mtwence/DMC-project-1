@@ -107,12 +107,11 @@ main {
 }
 
 .search-bar button {
-    width: 70px;
-float: center;
-border: transparent;
-background: transparent;
-cursor: pointer;
-
+   width: 70px;
+   float: center;
+   border: transparent;
+   background: transparent;
+   cursor: pointer;
 }
 
 .box {
@@ -147,8 +146,9 @@ cursor: pointer;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 400px;
+    max-height: 600px;
     width: 300px;
-    height: 100%;
+    
     background: transparent;
     color: white;
     margin: 5%;
@@ -196,7 +196,8 @@ cursor: pointer;
 }
 
 footer {
-    height: 50px;
+    padding-top: 15px;
+    height: 10vh;
     font-size: 24px;
     color: #fff;
 }
@@ -219,7 +220,7 @@ footer {
         border-radius: 60px;
         backdrop-filter: blur(3px) saturate(180%);
         margin-top: 5%;
-        margin-left: 40%;
+        margin-left: 300px;
     
     }
     
