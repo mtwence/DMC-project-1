@@ -16,14 +16,21 @@ $("#favorite-button").click(function (){
 });
 
 function retrieveFav(){
-	var favStore = JSON.parse(localStorage.getItem("call"));
+	var favStore = localStorage.getItem("call");
 	if (favStore) {
         favList = favStore;
-    }
+		for(let i = 0;i<favList.length-1;i++){
+			
+		}
+    }else if(localStorage.length <= 0){
+		localStorage.clear();
+		favList = [];
+	}
 }
 
 
 	// Fetch request for Movie Database Alternative 
+
 // function to add %20 inbetween spaces of searchs for input into MDA API
 form.on("submit", function (x) {
     x.preventDefault();
