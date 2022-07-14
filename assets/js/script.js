@@ -18,17 +18,27 @@ $("#favorite-button").click(function (){
 });
 
 function retrieveFav(){
-	var favStore = JSON.parse(localStorage.getItem("call"));
+	var favStore = localStorage.getItem("call");
 	if (favStore) {
         favList = favStore;
-    }
+		for(let i = 0;i<favList.length-1;i++){
+			
+		}
+    }else if(localStorage.length <= 0){
+		localStorage.clear();
+		favList = [];
+	}
 }
 
-submitButton.addEventListener("click", function (event) {
-	event.preventDefault();
-	movieInput = document.querySelector("#movie-input").value;
-	console.log(movieInput);
-	// Fetch request for Movie Database Alternative 
+// Fetch request for Movie Database Alternative 
+// function to add %20 inbetween spaces of searchs for input into MDA API
+form.on("submit", function (x) {
+    x.preventDefault();
+	var search = input.val();
+	var rep = / /gi;
+	var movieInput = search.replace(rep, "%20");
+	console.log(movieInput)
+
 	const options = {
 		method: 'GET',
 		headers: {
@@ -81,10 +91,9 @@ submitButton.addEventListener("click", function (event) {
 							var streamName = data.collection.locations[i].display_name;
 							streamStorage.push(streamName)
 							console.log(streamStorage)
-							
+								
 							for (var k = 0; k < streamStorage.length; k++) {
 								var streamDisplay = document.getElementById(i + 1).children[0].children[1];
-								console.log(streamDisplay)
 								if (streamStorage < 1) {
 									streamDisplay.textContent = "Not Available for Streaming"
 								}
