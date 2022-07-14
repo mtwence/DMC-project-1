@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 2px solid red; 
-}
+} */
 
 .navbar-item img {
     max-height: fit-content;
@@ -58,7 +58,6 @@ input {
 }
 nav img {
     height: 12vh;
-    align-items: flex-start;
 }
 
 main {
@@ -82,7 +81,7 @@ main {
     
 }
 .search-container {
-    max-width: 100%;
+    max-width: 85%;
     min-height: 20vh;
     max-height: 100vh;
     justify-content: center;
@@ -93,50 +92,75 @@ main {
 .search-bar{
     width: fit-content;
     height: fit-content;
+    align-items: center;
     max-width: 100%;
+    min-width: 600px;
     max-height: 10%;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: 40%;
 
 }
 
 .search-bar input {
     background: transparent;
-    width: 400px;
+    min-width: 85%;
+    min-height: 10vh;
     flex: 1;
-    border: 0;
     outline: none;
     padding: 24px 20px;
     font-size: 24px;
     text-align: left;
-    color: #fff;
-    
+    color: #fff;   
+}
+
+input {
+    background: transparent;
+    height: 200px;
 }
 
 ::placeholder {
     color: rgb(189, 198, 201);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .search-bar button img {
+    padding-top: 20px;
+    right: center;
     width: 35px;
 }
 
 .search-bar button {
-border: 0;
-border-radius: 50%;
+    width: 70px;
+float: center;
+border: transparent;
 background: transparent;
 cursor: pointer;
+
+}
+
+.favorite-btn {
+    float: right;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    backdrop-filter: blur(3px) saturate(180%);
+    margin-top: 5%;
+    margin-left: 40%;
+    width: 70px;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 60px;
+    backdrop-filter: blur(3px) saturate(180%);
 }
 
 
-
 .card {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 400px;
@@ -145,7 +169,10 @@ cursor: pointer;
     background: transparent;
     color: white;
     margin: 5%;
+    border: none;
+    
 }
+
 
 .media {
     display: block;
@@ -157,8 +184,9 @@ cursor: pointer;
 }
 
 .movie-title {
-    width: auto;
-    height: auto;
+    min-width: fit-content;
+    max-width: 100%;
+    height: fit-content;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
@@ -175,13 +203,15 @@ cursor: pointer;
 }
 
 .streaming-services {
-    width: auto;
-    height: auto;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 60px;
-    backdrop-filter: blur(3px) saturate(180%);
-    text-align: center;
+        min-width: fit-content;
+        max-width: 100%;
+        height: fit-content;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 60px;
+        backdrop-filter: blur(3px) saturate(180%);
+        text-align: center;
 }
+
 
 footer {
     height: 50px;

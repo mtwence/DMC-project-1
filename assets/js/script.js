@@ -1,3 +1,5 @@
+
+
 var input = $("#input");
 var form = $("#form");
 
@@ -27,6 +29,7 @@ function retrieveFav(){
 		favList = [];
 	}
 }
+
 
 
 	// Fetch request for Movie Database Alternative 
