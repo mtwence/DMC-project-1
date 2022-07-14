@@ -2,23 +2,16 @@
     border: 2px solid red; 
 } */
 
+.navbar{
+    height: 50%;
+}
 .navbar-item img {
     max-height: fit-content;
 }
 
-.navbar-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar-brand {
-    display: flex;
-}
-
-
-
-.buttons, nav {
-    float: right;
+.navbar-brand{
+display: flex;
+justify-content: space-between;
 }
 
 h1 {
@@ -43,6 +36,9 @@ h1 {
     box-shadow: 5px 5px 5px black;
     font-size: 45px;
 }
+nav img {
+    height: 16vh;
+}
 
 #input {
     background: rgba(255, 255, 255, 0.2);
@@ -53,41 +49,31 @@ h1 {
     margin-left: 2%;
 }
 
-nav img {
-    height: 16vh;
-}
-
 main {
-    height: fit-content;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(rgba(0,8,51,0.3),rgba(0,8,51,0.3)), url(../images/21523.jpg);
     display: block;
     align-items: center;
     justify-content: space-around;
 }
-.search-container {
-    padding-top: 8%;
-    height: 50vh;
-    align-items: center;
-    display: flex;
-}
+
 
 .search-bar{
     max-width: 100vh;
     min-width: 100vh;
-    padding: 7px;
+    padding: 9px 5px 7px 8px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 60px;
     backdrop-filter: blur(3px) saturate(180%);
-    margin-top: 3%;
-    align-items: center;
-    justify-items: center;
+    margin-top: 100px;
     margin-left: 600px; 
 }
 
 .search-bar input {
     background: transparent;
     justify-items: center;
+    min-height: fit-content;
     min-width: 85%;
     padding: 16px;
     font-size: 24px;
